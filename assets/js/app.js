@@ -22,15 +22,16 @@ AFRAME.registerComponent('scale-on-mouseleave', {
     });
   }
 });
-
 AFRAME.registerComponent('follow1', {
   schema: {
     target: {type: 'selector'},
   },
   init: function () {
+
     var data = this.data;
     this.el.addEventListener('click', function () {
       this.directionVec3 = new THREE.Vector3();
+
       //var targetPosition = this.data.target.object3D.position;
       //var currentPosition = this.object3D.position;
 
@@ -41,23 +42,18 @@ AFRAME.registerComponent('follow1', {
     // Grab position vectors (THREE.Vector3) from the entities' three.js objects.
     var targetPosition = this.data.target.object3D.position;
     var currentPosition = this.el.object3D.position;
+
     //var camera = document.querySelector("#camera").object3D.position;
     this.el.addEventListener('click', function () {
       console.log("HELLO");
-      //var camera = document.querySelector("#camera").object3D.position;
-      //console.log(camera.position);
+      // Calculate the distance.
+      //distance = directionVec3.length;
+      document.querySelector("#cameraWrapper").setAttribute('position', {x: 0, y: -1,  z: targetPosition.z + 10});
     });
-    // Subtract the vectors to get the direction the entity should head in.
-    //directionVec3.copy(targetPosition).sub(currentPosition);
-    // Calculate the distance.
-    //var distance = directionVec3.length();
-    // Don't go any closer if a close proximity has been reached.
-    //if (distance < 1) { return; }
-    // Scale the direction vector's magnitude down to match the speed.
-
-
   }
 });
+
+
 /*
 AFRAME.registerComponent('follow', {
   schema: {

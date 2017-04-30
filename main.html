@@ -40,9 +40,11 @@
       <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
   </a-box>
 
-  <a-camera  id="camera" position="0 .5 0" >
-    <a-cursor></a-cursor>
+  <a-entity id='cameraWrapper' position="0 -1 0">
+  <a-camera>
+    <a-cursor> </a-cursor>
   </a-camera>
+  </a-entity>
 </a-scene>
 
 
