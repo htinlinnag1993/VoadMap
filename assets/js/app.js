@@ -7,6 +7,7 @@ AFRAME.registerComponent('scale-on-mouseenter', {
     var data = this.data;
     this.el.addEventListener('mouseenter', function () {
       this.setAttribute('scale', data.to);
+      var targetPosition = document.querySelector("#box1").object3D.position.z;
     });
   }
 });
@@ -22,6 +23,77 @@ AFRAME.registerComponent('scale-on-mouseleave', {
   }
 });
 
-AFRAME.registerComponent('cameramove'), {
+AFRAME.registerComponent('follow1', {
+  schema: {
+    target: {type: 'selector'},
+  },
+  init: function () {
+    var data = this.data;
+    this.el.addEventListener('click', function () {
+      this.directionVec3 = new THREE.Vector3();
+      //var targetPosition = this.data.target.object3D.position;
+      //var currentPosition = this.object3D.position;
 
+    });
+  },
+  tick: function (time, timeDelta) {
+    var directionVec3 = this.directionVec3;
+    // Grab position vectors (THREE.Vector3) from the entities' three.js objects.
+    var targetPosition = this.data.target.object3D.position;
+    var currentPosition = this.el.object3D.position;
+    //var camera = document.querySelector("#camera").object3D.position;
+    this.el.addEventListener('click', function () {
+      console.log("HELLO");
+      //var camera = document.querySelector("#camera").object3D.position;
+      //console.log(camera.position);
+    });
+    // Subtract the vectors to get the direction the entity should head in.
+    //directionVec3.copy(targetPosition).sub(currentPosition);
+    // Calculate the distance.
+    //var distance = directionVec3.length();
+    // Don't go any closer if a close proximity has been reached.
+    //if (distance < 1) { return; }
+    // Scale the direction vector's magnitude down to match the speed.
+
+
+  }
 });
+/*
+AFRAME.registerComponent('follow', {
+  schema: {
+    target: {type: 'selector'},
+  },
+  init: function () {
+    this.directionVec3 = new THREE.Vector3();
+    //var data = this.data;
+    this.el.addEventListener('click', function () {
+      var directionVec3 = this.directionVec3;
+      // Grab position vectors (THREE.Vector3) from the entities' three.js objects.
+      var targetPosition = this.data.target.object3D.position;
+      var currentPosition = this.el.object3D.position;
+      // Subtract the vectors to get the direction the entity should head in.
+      directionVec3.copy(targetPosition).sub(currentPosition);
+      // Calculate the distance.
+      distance = directionVec3.length();
+      console.log("hello");
+
+    });
+  },
+  tick: function (time, timeDelta) {
+    // Don't go any closer if a close proximity has been reached.
+    if (distance < 1) { return; }
+    // Scale the direction vector's magnitude down to match the speed.
+    var factor = this.data.speed / distance;
+    ['x', 'y', 'z'].forEach(function (axis) {
+      directionVec3[axis] *= factor * (timeDelta / 1000);
+    });
+    // Translate the entity in the direction towards the target.
+    var camera = sceneEl.querySelector('#camera');
+    camera.el.setAttribute('position', {
+      x: currentPosition.x + directionVec3.x,
+      y: currentPosition.y + directionVec3.y,
+      z: currentPosition.z + directionVec3.z
+    });
+  }
+});
+*/
