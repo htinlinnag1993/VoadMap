@@ -55,7 +55,7 @@ AFRAME.registerComponent('follow1', {
       //camPos.setAttribute('position', {x: 0, y: -1,  z: targetPosition.z + 8});
       //while((targetPosition.z - currentPosition.z) < 1)
         camPos.setAttribute('position', {x: targetPosition.x, y: targetPosition.y,  z: targetPosition.z + 10});
-        camPos.setAttribute('rotation', {x: targetrotation.x, y: targetrotation.y,  z: targetrotation.z});
+        //camPos.setAttribute('rotation', {x: targetrotation.x, y: targetrotation.y,  z: targetrotation.z});
     });
   }
 });
