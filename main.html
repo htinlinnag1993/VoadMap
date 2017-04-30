@@ -14,31 +14,7 @@
   <body>
 
     <a-scene>
-  <a-assets>
-    <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
-  </a-assets>
-  <a-box follow1="target: #box1" width="1" height="1" depth="1" src="#boxTexture" position="-3 0 -5" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
-      <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
-      <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
-      <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
-  </a-box>
-  <a-box follow1="target: #box1" width="1" height="1" depth="1" src="#boxTexture" position="0 0 -5" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2" >
-      <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
-      <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
-      <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
-  </a-box>
-  <a-box follow1="target: #box1" width="1" height="1" depth="1" src="#boxTexture" position="3 0 -5" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2 ">
-      <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
-      <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
-      <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
-  </a-box>
-
-
-  <a-box id="box1" width="1" height="1" depth="1" src="#boxTexture" position="0 0 -30" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2 ">
-      <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
-      <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
-      <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
-  </a-box>
+  
   <a-entity id="opacity" position="0 0 -3"
                 text="color: red; align: center; value: JavaScript; width: 5">
     </a-entity>
