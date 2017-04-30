@@ -13,39 +13,133 @@
   </head>
   <body>
 
-    <a-scene>
-  <a-assets>
-    <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
-  </a-assets>
-  <a-box follow1="target: #box1" width="1" height="1" depth="1" src="#boxTexture" position="-3 0 -5" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
-      <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
-      <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
-      <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
-  </a-box>
-  <a-box follow1="target: #box1" width="1" height="1" depth="1" src="#boxTexture" position="0 0 -5" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2" >
-      <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
-      <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
-      <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
-  </a-box>
-  <a-box follow1="target: #box1" width="1" height="1" depth="1" src="#boxTexture" position="3 0 -5" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2 ">
-      <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
-      <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
-      <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
-  </a-box>
+        <a-scene>
+              <a-assets>
+                <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
+                <!-- <img id="html-css" src="">
+                <img id="less" src="">
+                <img id="sass" src="">
+                <img id="js" src=""> -->
+                <img id="reactjs" src="./assets/icons/react.png">
+                <img id="angularjs" src="./assets/icons/angular.png">
+                <img id="d3js" src="./assets/icons/D3.png">
+                <!-- <img id="git" src="">
+                <img id="" src="">
+                <img id="" src="">
+                <img id="" src="">
+                <img id="" src=""> -->
+              </a-assets>
+
+              <!-- Level 1: Starting default point -->
+              <a-box follow1="target: #box1" width="1" height="1" depth="1" src="#boxTexture" position="-3 0 -5" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
+                  <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                  <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+              </a-box>
+              <a-entity id="opacity" position="-3 0 -5" text="color: red; align: center; value: Animating opacity; width: 5">     </a-entity>
+              <a-box follow1="target: #box1" width="1" height="1" depth="1" src="#boxTexture" position="0 0 -5" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2" >
+                  <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                  <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+              </a-box>
+              <a-box follow1="target: #box1" width="1" height="1" depth="1" src="#boxTexture" position="3 0 -5" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2 ">
+                  <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                  <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+              </a-box>
+
+              <!-- Level 2 -->
+              <!-- Section 1 -->
+              <a-box id="box1" width="1" height="1" depth="1" src="#boxTexture" position="-15 0 -17" rotation="0 45 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
+                  <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                  <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+              </a-box>
+              <a-box id="box1" width="1" height="1" depth="1" src="#boxTexture" position="-13.5 0 -18.5" rotation="0 45 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
+                  <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                  <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+              </a-box>
+              <a-box id="box1" width="1" height="1" depth="1" src="#boxTexture" position="-12 0 -20" rotation="0 45 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
+                  <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                  <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+              </a-box>
+              <!-- Section 2 -->
+              <a-box id="box1" width="1" height="1" depth="1" src="#reactjs" position="-3 0 -25" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
+                  <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                  <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+              </a-box>
+              <a-box id="box1" width="1" height="1" depth="1" src="#angularjs" position="0 0 -25" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
+                  <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                  <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+              </a-box>
+              <a-box id="box1" width="1" height="1" depth="1" src="#d3js" position="3 0 -25" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
+                  <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                  <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+              </a-box>
+              <!-- Section 3 -->
+              <a-box id="box1" width="1" height="1" depth="1" src="#boxTexture" position="15 0 -17" rotation="0 45 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
+                  <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                  <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+              </a-box>
+              <a-box id="box1" width="1" height="1" depth="1" src="#boxTexture" position="13.5 0 -18.5" rotation="0 45 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
+                  <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                  <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+              </a-box>
+              <a-box id="box1" width="1" height="1" depth="1" src="#boxTexture" position="12 0 -20" rotation="0 45 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2">
+                  <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                  <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+              </a-box>
+
+              <!-- Level 3 -->
+              <!-- Section 5 -->
+              <!-- <a-box id="box2" width="1" height="1" depth="1" src="#boxTexture" position="0 0 -60" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2 ">
+                  <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                  <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+              </a-box>
+              <a-box id="box2" width="1" height="1" depth="1" src="#boxTexture" position="-3.000 0 -60" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2 ">
+                  <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                  <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+              </a-box>
+              <a-box id="box2" width="1" height="1" depth="1" src="#boxTexture" position="3.000 0 -60" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2 ">
+                  <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                  <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+              </a-box> -->
+
+              <!-- Level 4 -->
+              <!-- <a-box id="box3" width="1" height="1" depth="1" src="#boxTexture" position="0 0 -90" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2 ">
+                  <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                  <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+              </a-box>
+              <a-box id="box3" width="1" height="1" depth="1" src="#boxTexture" position="-3.000 0 -90" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2 ">
+                  <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                  <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+              </a-box>
+              <a-box id="box3" width="1" height="1" depth="1" src="#boxTexture" position="3.000 0 -90" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2 ">
+                  <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
+                  <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+                  <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
+              </a-box> -->
 
 
-  <a-box id="box1" width="1" height="1" depth="1" src="#boxTexture" position="0 0 -30" rotation="0 0 0" scale="2 2 2 " scale-on-mouseleave="to: 1 1 1"scale-on-mouseenter="to: 2 2 2 ">
-      <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.2 2.2 2.2"></a-animation>
-      <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
-      <a-animation attribute="rotation" begin="click" dur="2000" to="360 360 360"></a-animation>
-  </a-box>
-
-  <a-entity id='cameraWrapper' position="0 -1 0">
-  <a-camera>
-    <a-cursor> </a-cursor>
-  </a-camera>
-  </a-entity>
-</a-scene>
+              <a-entity id='cameraWrapper' position="0 -1 0">
+                  <a-camera>
+                    <a-cursor> </a-cursor>
+                  </a-camera>
+              </a-entity>
+        </a-scene>
 
 
   </body>
