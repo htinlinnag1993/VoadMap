@@ -22,9 +22,12 @@ AFRAME.registerComponent('scale-on-mouseleave', {
     });
   }
 });
+
 AFRAME.registerComponent('follow1', {
+
   schema: {
     target: {type: 'selector'},
+    speed: {type: 'number', default: '100'}
   },
   init: function () {
 
@@ -37,18 +40,22 @@ AFRAME.registerComponent('follow1', {
 
     });
   },
+
   tick: function (time, timeDelta) {
+    var camPos = document.querySelector("#cameraWrapper");
     var directionVec3 = this.directionVec3;
     // Grab position vectors (THREE.Vector3) from the entities' three.js objects.
     var targetPosition = this.data.target.object3D.position;
+    var targetrotation = this.data.target.object3D.rotation;
     var currentPosition = this.el.object3D.position;
 
     //var camera = document.querySelector("#camera").object3D.position;
     this.el.addEventListener('click', function () {
-      console.log("HELLO");
-      // Calculate the distance.
-      //distance = directionVec3.length;
-      document.querySelector("#cameraWrapper").setAttribute('position', {x: 0, y: -1,  z: targetPosition.z + 10});
+
+      //camPos.setAttribute('position', {x: 0, y: -1,  z: targetPosition.z + 8});
+      //while((targetPosition.z - currentPosition.z) < 1)
+        camPos.setAttribute('position', {x: targetPosition.x, y: targetPosition.y,  z: targetPosition.z + 10});
+        camPos.setAttribute('rotation', {x: targetrotation.x, y: targetrotation.y,  z: targetrotation.z});
     });
   }
 });
